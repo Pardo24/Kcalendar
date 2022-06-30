@@ -1,0 +1,40 @@
+<h1>{{appTitle}}</h1>
+
+<h4>Your personal Nutrition Bot</h4>
+<br>
+<p>First of all we need some info about you to calculate your energetic expenditure</p>
+
+<form action="/diet" method="POST" id="formulario">
+   <label>Edad
+      <input type="number" name="edad">
+   </label>
+<br><br>
+   <label>Genero
+   <select name="genero" id="genero">
+  <option value="hombre">Hombre</option>
+  <option value="mujer">Mujer</option>
+   </select>
+   </label>
+<br><br>
+   <label>Peso
+      <input type="number" placeholder="Kg"name="peso">
+   </label>
+<br><br>
+   <label>Altura
+      <input type="number" placeholder="Cm" name="altura">
+   </label>
+<br><br>
+   <label>Actividad fisica
+  <select name="actividad" id="actividad">
+  <option value="320">Poca (estilo de vida sedentario)</option>
+  <option value="720">Moderada (entre uno y tres dias a la semana)</option>
+  <option value="950">Mucha (mas de tres dias a la semana)</option>
+  </select>
+   </label>
+<br><br>
+   <button type="submit" class="btn btn-info"><a href="/diet">Enviar</a></button>
+</form>
+
+{{#if errorMessage}}
+   {{errorMessage}}
+{{/if}}
