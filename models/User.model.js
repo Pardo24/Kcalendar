@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+dieta= require("../models/Diet.model")
 
 // TODO: Please make sure you edit the user model to whatever makes sense in this case
 const userSchema = new Schema(
@@ -11,7 +12,12 @@ const userSchema = new Schema(
     
     GET :{
       type:Number
+    },
+
+    dieta:{
+      
     }
+
   },
   
   {
