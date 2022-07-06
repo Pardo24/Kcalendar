@@ -1,0 +1,26 @@
+<br>
+<h1>Welcome {{user.username}}</h1>
+<br>
+<h4>Your kcal needs: {{user.GET}}</h4>
+<br>
+{{#each user.favorites}}
+<div class="color shadow">
+<h4>{{this.label}}</h4>
+    <div class="wrap">
+
+<img src={{this.image}} width="200" height="200"/>
+<p><button class="btn btn-primary" ><a href="{{this.url}}" style="text-decoration:none; color:white; underline:none" target="_blank">Source recipe</a></button></p>
+<p></p>
+<tbody>Total calories: {{this.calories}} kcal<br>
+Total time: {{this.totalTime}} min</tbody>
+
+<form action = "/delete-favorite" method="POST">
+    <input type="hidden" name="id" value={{this._id}}>
+    <button type="submit" class="btn btn-danger">Borrar favorito</button>
+</form>
+
+</div>
+</div>
+{{/each}}
+
+

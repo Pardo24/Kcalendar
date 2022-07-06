@@ -1,9 +1,57 @@
 
-<h1>{{recipe.label}}</h1>
+<body>
+    <br><br>
+<h2 style="margin-left: 170px ;">Recipes <img src="https://www.logomaker.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khv+Hqh5KnBvOwXs1M3EMoAJtliUqh...Ns9...Q7" width="170px" height="100px"/></h2>
+<br>
+<p>You can only choose one of each page, choose wisely</p>
+<br><br>
+{{#each recipes1}}
+{{#if this.recipe.url}}
 
-<img href={{recipe.images.REGULAR.url}} width="300" height="300"/>
+<body class="recipes">
+    <div class="color shadow">
 
-<p><a href={{recipe.url}}>Source recipe</a></p>
+<h4>{{this.recipe.label}}</h4>
 
+<div class="flex">
 
-<tbody>{{recipe.ingredientLines}}</tbody>
+{{#recipe}}
+<img src={{this.image}} width="300" height="300"/>
+{{/recipe}}
+
+<br><br>
+
+<p><button class="btn btn-primary" ><a href="{{this.recipe.url}}" style="text-decoration:none; color:white" target="_blank">Source recipe</a></button></p>
+
+{{#each this.recipe.ingredientLines}}
+
+<tbody style="font-weight:700">Ingredients:</tbody>
+<br>
+
+<tbody>- {{.}}</tbody>
+{{/each}}
+<p></p>
+<tbody>Total kcal: {{this.recipe.calories}}</tbody>
+<br>
+<tbody>Total time: {{this.recipe.totalTime}} min</tbody>
+</body>
+
+</div>
+<form action = "/add-favorite" method="POST">
+          
+          <input type="hidden" name="label" value="{{this.recipe.label}}">
+          <input type="hidden" name="image" value={{this.recipe.image}}>
+          <input type="hidden" name="url" value={{this.recipe.url}}>
+          <input type="hidden" name="ingredientLines" value="{{this.recipe.ingredientLines}}">
+          <input type="hidden" name="calories" value={{this.recipe.calories}}>
+          <input type="hidden" name="totalTime" value={{this.recipe.totalTime}}>
+          <input type="hidden" name="apiId" value={{this.recipe.uri}}>
+
+          <button type="submit" class="btn btn-success">Añadir a favoritos</button>
+</form>
+
+</div>
+          <br><br><br>
+{{/if}}
+{{/each}}
+</body>

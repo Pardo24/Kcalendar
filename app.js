@@ -34,6 +34,15 @@ app.use("/auth", authRoutes);
 const dietRoutes = require("./routes/diet.routes")
 app.use("/diet", dietRoutes)
 
+const recipeRoutes = require('./routes/recetas.routes')
+app.use('/recipe', recipeRoutes)
+
+const profileRoutes = require('./routes/profile.routes')
+app.use('/', profileRoutes)
+
+
+
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 

@@ -120,7 +120,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
             errorMessage: "Wrong credentials.",
           });
         }
-        req.session.user = user._id;
+        req.session.user = user;
         
         return res.redirect("/");
       });

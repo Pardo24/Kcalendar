@@ -1,22 +1,38 @@
 const { Schema, model } = require("mongoose");
-dieta= require("../models/Diet.model")
+
 
 // TODO: Please make sure you edit the user model to whatever makes sense in this case
 const userSchema = new Schema(
   {
     username: {
       type: String,
-      // unique: true -> Ideally, should be unique, but its up to you
     },
+    
     password: String,
     
     GET :{
       type:Number
     },
 
-    dieta:{
-      
-    }
+    favorites:  [{	
+      type: Schema.Types.ObjectId,
+      ref: "Recipe"
+    }],
+
+    desayuno: [{	
+      type: Schema.Types.ObjectId,
+      ref: "Desayuno"
+    }],
+
+    comida:  [{	
+      type: Schema.Types.ObjectId,
+      ref: "Comida"
+    }],
+
+    cena:     [{	
+      type: Schema.Types.ObjectId,
+      ref: "Cena"
+    }]  
 
   },
   

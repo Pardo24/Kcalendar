@@ -1,17 +1,55 @@
-body {
-  padding: 60px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: black;
-}
-
-a {
-  color: #00b7ff;
-}
-
-h1 {
-  color: 15px;
-}
-
-#formulario{
+body{
   text-align: center;
+}
+
+body {
+  padding: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.flex{
+  display: flex;
+  justify-content:space-evenly;
+  align-items:center;
+  position: relative;
+}
+.recepteshtml{
+background-color: #f5f0bbc5;
+}
+
+.table{
+  background-color: rgba(149, 217, 217, 0.612);
+  border-radius: 30px;
+}
+
+.color{
+  background-color: #c0e3a00c;
+  padding-bottom: 50px;
+  border-radius: 90px;
+  padding-top: 30px;
+  margin-bottom: 40px;
+  
+}
+ img{
+  margin: 30px 0 30px 0;
+}
+.wrap{
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.btn-primary{
+  border-radius: 70px!important;
+}
+
+
+
+
+
+.shadow {
+  padding: 2% 0%;
+  background-color: #b2f5736c;
+  border-radius: 30px;
 }

@@ -1,6 +1,6 @@
 const {Schema, model}= require('mongoose')
 // TODO: Please make sure you edit the user model to whatever makes sense in this case
-const recipeSchema = new Schema(
+const comidaSchema = new Schema(
   {
     label: {
       type: String,
@@ -10,17 +10,11 @@ const recipeSchema = new Schema(
     ,
     url:  String
     ,
-    ingredientLines:{ type:[String]}
-    ,
-    calories: Number
-    ,
-    totalTime: Number
-    ,
-    apiId: String
-    
+    uri: String
 }
 );
 
-const Recipe = model("Recipe", recipeSchema);
 
-module.exports = Recipe;
+const Comida = model("Comida", comidaSchema);
+
+module.exports = Comida;
