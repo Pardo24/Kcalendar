@@ -1,41 +1,43 @@
-<br>
-<img src="https://www.logomaker.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khv+Hqh5KnBvOwXs1M3EMoAJtliUqh...Ns9...Q7"/>
-<br>
+
+<br><br><br>
 <div class="shadow">
 <h4>Your personal Nutrition Bot</h4> 
 
 <p>First of all we need some info about you to calculate your energetic expenditure (only for members)</p>
 
 <form action="/diet" method="POST" id="formulario" >
-   <label>Edad
+   <label>Age
       <input type="number" name="edad">
    </label>
 
-   <label>Genero
+   <label>Genre
    <select name="genero" id="genero">
-  <option value="hombre">Hombre</option>
-  <option value="mujer">Mujer</option>
+  <option value="hombre">Man</option>
+  <option value="mujer">Woman</option>
    </select>
    </label>
-
-   <label>Peso
+<br><br>
+   <label>Weight
       <input type="number" placeholder="Kg"name="peso">
    </label>
 
-   <label>Altura
+   <label>Height
       <input type="number" placeholder="Cm" name="altura">
    </label>
 <br><br>
-   <label>Actividad fisica
+   <label>Physical Activity
   <select name="actividad" id="actividad">
-  <option value="330">Poca (estilo de vida sedentario)</option>
-  <option value="660">Moderada (entre uno y tres dias a la semana)</option>
-  <option value="990">Mucha (mas de tres dias a la semana)</option>
+  <option value="330">Low (sedentary lifestyle)</option>
+  <option value="660">Moderated (between one to three days a week)</option>
+  <option value="990">A lot (more than three days a week)</option>
   </select>
    </label>
 <br><br>
-   <button type="submit" onclick="window.location.href='/diet'" class="btn btn-info">Enviar</button>
+   <button type="submit" onclick="window.location.href='/diet'" class="btn btn-info">Send</button>
 </form>
+</div>
+<img src="https://www.logomaker.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khv+Hqh5KnBvOwXs1M3EMoAJtliUqh...Ns9...Q7"/>
+
 </div>
 {{#if errorMessage}}
    {{errorMessage}}

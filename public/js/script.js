@@ -1,10 +1,9 @@
 document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    console.log("new-app JS imported successfully!");
-  },
-  false
-);
+    "DOMContentLoaded",
+    () => {
+      console.log("new-app JS imported successfully!");
+    },
+    false
+  );
 
 
-document.getElementsByClassName().addEventListener()

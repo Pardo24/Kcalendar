@@ -1,15 +1,24 @@
-<br><br><br><br>
-<form action="/auth/signup" method="POST">
-   <label> Username
-      <input type="text" name="username">
-   </label>
-   <label> Password
-      <input type="password" name="password">
-   </label>
+<br><br>
+<br><br>
+<h3 style="color:green">Signup</h3>
+<br>
+<form class="form-floating"action="/auth/signup" method="POST" style="margin-left:30%; margin-right:30%">
+   <div class="form-floating mb-3">
 
-   <button type="submit">Submit</button>
+      <input class="form-control" id="floatingInputValue" placeholder="User123" type="text" name="username">
+      <label for="floatingInputValue"> New username</label>
+</div>
+   <div class="form-floating">
+  <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+  <label for="floatingPassword">Password</label>
+</div>
+
+<br>
+   <button class="btn btn-success" style="border-radius: 40px;"type="submit">Submit</button>
 </form>
 
 {{#if errorMessage}}
    {{errorMessage}}
 {{/if}}
+<br><br>
+<img src="https://www.logomaker.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khv+Hqh5KnBvOwXs1M3EMoAJtliUqh...Ns9...Q7"/>

@@ -15,7 +15,7 @@ router.get('/', (req,res, next)=>{
   .then((recipesTrans)=>{
 
     recetasMostrar= recipesTrans.data.hits.slice(0,20)
-    res.render('recipe', ({recipes1: recetasMostrar}))
+    res.render('recipe', {recipes1: recetasMostrar, user:req.session.user})
     })
     .catch((err)=> console.log(err))
 })

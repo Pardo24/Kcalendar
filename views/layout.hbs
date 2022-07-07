@@ -12,30 +12,36 @@
 
   <body class="recepteshtml">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:#90c8aca4!important; border-radius:30px">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" style="background-color:#90c8acd2!important; border-radius:30px">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">NutriBot</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ">
         <button class="btn"><a class="nav-link active " aria-current="page" href="/">Home</a></button>
         <button class="btn"><a class="nav-link active " aria-current="page" href="/diet">Diet</a></button>
         <button class="btn"><a class="nav-link active " aria-current="page" href="/recipe">Recipes</a></button>
-        <button class="btn"><a class="nav-link active " aria-current="page" href="/profile">Profile</a></button>
-        <button class="btn"><a class="nav-link active " href="/whatnow" tabindex="-1" aria-disabled="true">Now what?</a></button>
-
-        <button class="btn btn-primary shadow"><a class="nav-link active " aria-current="page" href="/auth/signup">Signup</a></button>
-        <button class="btn btn-info shadow" style="border-radius:40px; margin-left:5px; margin-right:620px;"><a class="nav-link active " aria-current="page" href="/auth/login">Login</a></button>
-        <button class="btn btn-danger shadow" style="border-radius:40px;"><a class="nav-link active"  href="/auth/logout" tabindex="-1" aria-disabled="true">Logout</a></button>
+        <button class="btn"><a class="nav-link active "  href="/whatnow" tabindex="-1" aria-disabled="true">Now what?</a></button>
+        <button class="btn btn-secondary " style="margin-left: 30px; border-radius:40px"><a class="nav-link active" style="color:white"  aria-current="page" href="/profile">Profile</a></button>
+      {{#if user}}
+        
+        <button class="btn btn-danger " id="out" style="border-radius:40px; margin-left:770px;"><a class="nav-link active" style="color:white"  href="/auth/logout">Logout</a></button>
       
+      {{else}}
+        <button class="btn btn-primary " style="margin-left:670px;" id="in"><a class="nav-link active" aria-current="page" style="color:white" href="/auth/signup">Signup</a></button>
+        <button class="btn btn-info " id="in" style="border-radius:40px; margin-left:5px; "><a class="nav-link active " aria-current="page"  href="/auth/login">Login</a></button>
+      {{/if}}
       </div>
     </div>
   </div>
 </nav>
 
     {{{body}}}
+
+
 
     <script src="/js/script.js"></script>
   </body>

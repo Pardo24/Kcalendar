@@ -1,35 +1,33 @@
 
-<body>
-    <br><br>
+<body><br>
 <h2 style="margin-left: 170px ;">Recipes <img src="https://www.logomaker.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khv+Hqh5KnBvOwXs1M3EMoAJtliUqh...Ns9...Q7" width="170px" height="100px"/></h2>
-<br>
 <p>You can only choose one of each page, choose wisely</p>
-<br><br>
+<br>
 {{#each recipes1}}
 {{#if this.recipe.url}}
 
 <body class="recipes">
     <div class="color shadow">
 
-<h4>{{this.recipe.label}}</h4>
+<h4 style="background-color:rgb(109, 197, 200); border-radius: 40px;margin:0 40%; padding: 1% 0%">{{this.recipe.label}}</h4>
 
 <div class="flex">
 
 {{#recipe}}
-<img src={{this.image}} width="300" height="300"/>
+<img style="border-radius:40px"src={{this.image}} width="270" height="270"/>
 {{/recipe}}
 
 <br><br>
 
 <p><button class="btn btn-primary" ><a href="{{this.recipe.url}}" style="text-decoration:none; color:white" target="_blank">Source recipe</a></button></p>
-
+<div style="background-color: ;">
 {{#each this.recipe.ingredientLines}}
 
 <tbody style="font-weight:700">Ingredients:</tbody>
 <br>
 
 <tbody>- {{.}}</tbody>
-{{/each}}
+{{/each}}</div>
 <p></p>
 <tbody>Total kcal: {{this.recipe.calories}}</tbody>
 <br>

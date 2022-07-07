@@ -40,10 +40,7 @@ router.post("/", isLoggedIn, (req, res, next)=>{
        
        
         User.findByIdAndUpdate(req.session.user._id, {GET}, {new:true})
-        
-    
       }
-    
     })
 
 
@@ -67,7 +64,7 @@ router.post("/", isLoggedIn, (req, res, next)=>{
 
           
        
-        res.render('diet')                    
+        res.render('diet', {user:req.session.user})                    
   
         })
       })

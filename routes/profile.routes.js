@@ -62,7 +62,7 @@ router.post("/add-favorite", isLoggedIn ,(req, res) =>{
         User.findById(req.session.user._id)
   .populate('favorites')
   .then((user) => {
-    res.render("profile", {user});
+    res.render("profile", {user:user});
   })
     })  
 
