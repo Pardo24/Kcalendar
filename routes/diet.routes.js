@@ -63,7 +63,7 @@ router.post("/", isLoggedIn, (req, res, next)=>{
         Desayuno.create(desayuno)
 
         .then(recetaDesay1=>{
-            
+            console.log(recetaDesay1)
 
           
        
