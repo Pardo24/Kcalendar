@@ -12,27 +12,28 @@
 
   <body class="recepteshtml">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" style="background-color:#90c8acd2!important; border-radius:30px">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">NutriBot</a>
+    <a class="" href="/" style=><img src="/images/277ab971-f79b-446a-ad93-06cb343ba25c.jpg" width="150" height="70"/></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
+  
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ">
-        <button class="btn"><a class="nav-link active " aria-current="page" href="/">Home</a></button>
-        <button class="btn"><a class="nav-link active " aria-current="page" href="/diet">Diet</a></button>
-        <button class="btn"><a class="nav-link active " aria-current="page" href="/recipe">Recipes</a></button>
-        <button class="btn"><a class="nav-link active "  href="/whatnow" tabindex="-1" aria-disabled="true">Now what?</a></button>
-        <button class="btn btn-secondary " style="margin-left: 30px; border-radius:40px"><a class="nav-link active" style="color:white"  aria-current="page" href="/profile">Profile</a></button>
-      {{#if user}}
+        <button class="btn link-success"><a class="nav-link active navlink"  aria-current="page"  href="/">Home</a></button>
+        <button class="btn"><a class="nav-link active navlink" aria-current="page" href="/diet">Diet</a></button>
+        <button class="btn"><a class="nav-link active navlink" aria-current="page" href="/recipe">Recipes</a></button>
+        <button class="btn"><a class="nav-link active navlink"  href="/whatnow" tabindex="-1" aria-disabled="true">Now what?</a></button>
         
-        <button class="btn btn-danger " id="out" style="border-radius:40px; margin-left:770px;"><a class="nav-link active" style="color:white"  href="/auth/logout">Logout</a></button>
-      
+      {{#if user}}
+        <button class="btn  " style="border-color:black;  border-radius:40px; margin-left:700px"><a class="nav-link active" style=""  aria-current="page" href="/profile">Profile</a></button>
+        <button class="btn  " id="out" style="border-color:black;border-radius:40px;margin-left: 20px; "><a class="nav-link active" style="weight: 600px;"  href="/auth/logout">Logout</a></button>
+
       {{else}}
-        <button class="btn btn-primary " style="margin-left:670px;" id="in"><a class="nav-link active" aria-current="page" style="color:white" href="/auth/signup">Signup</a></button>
-        <button class="btn btn-info " id="in" style="border-radius:40px; margin-left:5px; "><a class="nav-link active " aria-current="page"  href="/auth/login">Login</a></button>
+      
+        <button class="btn  " style="border-color:black;margin-left:670px;border-radius:40px;" id="in"><a class="nav-link active" aria-current="page" style=" border-radius:40px" href="/auth/signup">Signup</a></button>
+        <button class="btn  " id="in" style="border-color:black;border-radius:40px; margin-left:5px; "><a class="nav-link active " aria-current="page"  href="/auth/login">Login</a></button>
       {{/if}}
       </div>
     </div>

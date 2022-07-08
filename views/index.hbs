@@ -1,31 +1,35 @@
 
-<br><br><br>
-<div class="shadow">
+<div class="imatgeportada">
+   <br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<div class="shadow" style="background-color:rgb(40, 39, 39); color:white">
 <h4>Your personal Nutrition Bot</h4> 
 
 <p>First of all we need some info about you to calculate your energetic expenditure (only for members)</p>
 
 <form action="/diet" method="POST" id="formulario" >
-   <label>Age
+   <label>Age: 
       <input type="number" name="edad">
-   </label>
+      </label>
 
-   <label>Genre
+   <label>Genre: 
    <select name="genero" id="genero">
   <option value="hombre">Man</option>
   <option value="mujer">Woman</option>
    </select>
    </label>
 <br><br>
-   <label>Weight
+   <label>Weight: 
       <input type="number" placeholder="Kg"name="peso">
-   </label>
+      </label>
 
-   <label>Height
+   <label>Height: 
       <input type="number" placeholder="Cm" name="altura">
    </label>
 <br><br>
-   <label>Physical Activity
+   <label>Physical Activity: 
   <select name="actividad" id="actividad">
   <option value="330">Low (sedentary lifestyle)</option>
   <option value="660">Moderated (between one to three days a week)</option>
@@ -36,7 +40,7 @@
    <button type="submit" onclick="window.location.href='/diet'" class="btn btn-info">Send</button>
 </form>
 </div>
-<img src="https://www.logomaker.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khv+Hqh5KnBvOwXs1M3EMoAJtliUqh...Ns9...Q7"/>
+<img src="/images/080cb663-0519-43f2-8f20-01504998778c.jpg"/>
 
 </div>
 {{#if errorMessage}}

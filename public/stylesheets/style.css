@@ -3,7 +3,6 @@ body{
 }
 
 body {
-  padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 .flex{
@@ -13,7 +12,13 @@ body {
   position: relative;
 }
 .recepteshtml{
-background-color: #fefae0;
+background-color: #fefefe;
+}
+.navlink:hover {
+  text-decoration: underline;
+  font-weight: 600;
+  text-decoration-color: green;
+  color: green!important;
 }
 
 .table{
@@ -21,17 +26,22 @@ background-color: #fefae0;
   border-radius: 30px;
 }
 
+.imatgeportada{
+  background-image: url(/images/fons.png);
+}
+
 .color{
-  background-color: #84edf3ae;
+  
   padding-bottom: 50px;
-  border-radius: 90px;
   padding-top: 30px;
   margin-bottom: 40px;
   
 }
+
  img{
   margin: 30px 0 30px 0;
 }
+
 .wrap{
   display: flex;
   align-items: center;
@@ -44,12 +54,6 @@ background-color: #fefae0;
   border-radius: 70px!important;
 }
 
-
-
-
-
 .shadow {
   padding: 2% 0%;
-  background-color: #b2f5736c;
-  border-radius: 30px;
 }

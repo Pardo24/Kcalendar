@@ -1,26 +1,27 @@
 
 <body><br>
-<h2 style="margin-left: 170px ;">Recipes <img src="https://www.logomaker.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khv+Hqh5KnBvOwXs1M3EMoAJtliUqh...Ns9...Q7" width="170px" height="100px"/></h2>
+<h2 style=" ;">Recipes</h2>
 <p>You can only choose one of each page, choose wisely</p>
 <br>
 {{#each recipes1}}
+
 {{#if this.recipe.url}}
 
 <body class="recipes">
-    <div class="color shadow">
-
-<h4 style="background-color:rgb(109, 197, 200); border-radius: 40px;margin:0 40%; padding: 1% 0%">{{this.recipe.label}}</h4>
+    <div class="color">
 
 <div class="flex">
 
 {{#recipe}}
-<img style="border-radius:40px"src={{this.image}} width="270" height="270"/>
+<img style=""src={{this.image}} width="500" height="500"/>
 {{/recipe}}
 
-<br><br>
-
-<p><button class="btn btn-primary" ><a href="{{this.recipe.url}}" style="text-decoration:none; color:white" target="_blank">Source recipe</a></button></p>
+<div class="flex" style="flex-direction:column">
+    <h4>{{this.recipe.label}}</h4>
+    <br><br>
+<p><button class="btn" style="border-color:black;  border-radius:40px;" ><a href="{{this.recipe.url}}" style="text-decoration:none; color:black" target="_blank">Source recipe</a></button></p>
 <div style="background-color: ;">
+    <br><br>
 {{#each this.recipe.ingredientLines}}
 
 <tbody style="font-weight:700">Ingredients:</tbody>
@@ -33,8 +34,8 @@
 <br>
 <tbody>Total time: {{this.recipe.totalTime}} min</tbody>
 </body>
+<br><br>
 
-</div>
 <form action = "/add-favorite" method="POST">
           
           <input type="hidden" name="label" value="{{this.recipe.label}}">
@@ -45,11 +46,11 @@
           <input type="hidden" name="totalTime" value={{this.recipe.totalTime}}>
           <input type="hidden" name="apiId" value={{this.recipe.uri}}>
 
-          <button type="submit" class="btn btn-success">Add to favorites</button>
+          <button type="submit" class="btn" style="border-color:black;  border-radius:40px;">Add to favorites</button>
 </form>
-
+</div></div>
 </div>
-          <br><br><br>
+          <br>
 {{/if}}
 {{/each}}
 </body>

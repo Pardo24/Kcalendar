@@ -4,25 +4,29 @@
 <h4>Your kcal needs: {{user.GET}}</h4>
 <br>
 {{#each user.favorites}}
-<div class="color shadow">
-<h4 style="background-color:rgb(109, 197, 200); border-radius: 40px;margin:0 40%; padding: 1% 0%">{{this.label}}</h4>
+
     <div class="wrap">
 
-<img style="border-radius:40px"src={{this.image}} width="200" height="200"/>
-<p><button class="btn btn-primary" ><a href="{{this.url}}" style="text-decoration:none; color:white; underline:none" target="_blank">Source recipe</a></button></p>
-<p></p>
-<tbody>Total calories: {{this.calories}} kcal<br>
-Total time: {{this.totalTime}} min</tbody>
+<img style=""src={{this.image}} width="500" height="500"/>
 
+<div class="flex" style="flex-direction:column">
+
+<h4 >{{this.label}}</h4>
+<br><br>
+<p><button class="btn" style="border-color:black;  border-radius:40px;" ><a href="{{this.url}}" style="text-decoration:none; color:black; underline:none" target="_blank">Source recipe</a></button></p>
+<p></p><br><br>
+<tbody>Total calories: {{this.calories}} kcal<br>
+    Total time: {{this.totalTime}} min</tbody>
+<br><br>
 <form action = "/delete-favorite" method="POST">
     <input type="hidden" name="id" value={{this._id}}>
     <button type="submit" class="btn btn-danger btn-close" aria-label="Delete favorite"></button>
 </form>
-
 </div>
+
 </div>
 {{/each}}
 
-<img src="https://www.logomaker.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khv+Hqh5KnBvOwXs1M3EMoAJtliUqh...Ns9...Q7"/>
+<img src="/images/277ab971-f79b-446a-ad93-06cb343ba25c.jpg"/>
 
 
