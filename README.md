@@ -5,6 +5,8 @@ Kcalendar is a web app that aims to make nutrition more accesible to the public.
 
 It has been developed with Javascript, Mongoose, Node, Express and Handlebars.
 
+
+
 ## What does it do?
 
 It asks some questions about you like your weight, height, age... then it generates a weekly diet based on your daily kcal needs, 
