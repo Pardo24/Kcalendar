@@ -10,7 +10,7 @@ It has been developed with Javascript, Mongoose, Node, Express and Handlebars.
 ## What does it do?
 
 It asks some questions about you like your weight, height, age... then it generates a weekly diet based on your daily kcal needs, 
-every meal has the correct nutritional % if proteins, fats and carbohidrates.
+every meal has the correct nutritional % of proteins, fats and carbohidrates according to the OMS.
 
 
 If you don't want to register you can use this user: (email: user@user.com  password: User1234)
