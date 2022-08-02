@@ -1,4 +1,4 @@
-# Kcalendar
+# Kcalendar app
 ### Autogenerator of diets
 
 Kcalendar is a web app that aims to make nutrition more accesible to the public.
